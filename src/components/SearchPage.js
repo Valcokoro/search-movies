@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../styles/SearchPage.css';
+import { CircularProgress } from '@mui/material';
+import { Box } from '@mui/system';
 import movie from '../apis/movie';
 import cinema from '../assets/cinema.jpg';
 
@@ -7,8 +9,19 @@ import cinema from '../assets/cinema.jpg';
 
 const SearchPage = () => {
 
+    
     const [term, setTerm] = useState('');
     const [movies, setMovies] = useState([]);
+    const [loading, setLoading] = useState()
+
+
+    const CircularIndeterminate = () => {
+      return (
+        <Box sx={{ display: 'flex' }}>
+          <CircularProgress />
+        </Box>
+      );
+    }
 
     const onSubmit = event => {
 
@@ -35,6 +48,9 @@ const SearchPage = () => {
                 apikey: KEY
             }
         });
+        if(response.data === null){
+           setLoading(CircularIndeterminate)
+        }
         setMovies(response.data)
         console.log(response.data)
     
@@ -66,9 +82,9 @@ const SearchPage = () => {
                        <p className='movie-title'>{movie.Title}</p> 
                        </div>
                        </div>
-                   
                })}
            </div>
+           <div>{loading}</div>
          
          
 
