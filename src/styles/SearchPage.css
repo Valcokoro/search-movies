@@ -1,0 +1,168 @@
+@media (min-width: 480px) {
+  .header {
+    margin-top: 0px;
+    background-color: #292929;
+    height: 100px;
+  }
+  .first-section {
+    width: 100%;
+  }
+  .cinema {
+    width: 100%;
+  }
+  .btn {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 193px;
+    height: 33.58px;
+    border: 1px solid #FFFFFF;
+    background-color: #292929;
+    color: #FFFFFF;
+  }
+  .incredible {
+    position: absolute;
+    width: 490px;
+    height: 282px;
+    left: 77px;
+    top: 247px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 94px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+  }
+  h3 {
+    width: 77px;
+    height: 31px;
+    margin-left: 30px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+  }
+  .search-bar {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 1206px;
+    height: 54px;
+    margin-left: 30px;
+    border: 1px solid #000000;
+  }
+  .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    margin-top: 40px;
+  }
+  .flex-item {
+    max-width: 30%;
+    margin: 10px;
+    text-align: center;
+  }
+  .movie-pics {
+    width: 200px;
+    margin-top: 30px;
+  }
+  .movie-title {
+    position: absolute;
+    width: 150px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 180px;
+    text-align: center;
+    color: black;
+  }
+}
+
+@media (max-width: 780px) {
+  .header {
+    margin-top: 0px;
+    background-color: #292929;
+    height: 70px;
+  }
+  .first-section {
+    width: 100%;
+  }
+  .cinema {
+    width: 100%;
+  }
+  .btn {
+    margin-top: 20px;
+    margin-left: 130px;
+    width: 108px;
+    height: 33.58px;
+    border: 1px solid #FFFFFF;
+    background-color: #292929;
+    color: #FFFFFF;
+  }
+  .incredible {
+    position: absolute;
+    width: 273px;
+    height: 72px;
+    margin-top: -180px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+  }
+  h3 {
+    width: 51px;
+    height: 21px;
+    margin-left: 20px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .search-bar {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 265px;
+    height: 34px;
+    margin-left: 20px;
+    border: 1px solid #000000;
+  }
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    padding: 10px;
+    margin-top: 40px;
+  }
+  .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .movie-pics {
+    width: 130px;
+  }
+  .movie-title {
+    width: 150px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    color: black;
+  }
+}
+/*# sourceMappingURL=SearchPage.css.map */
