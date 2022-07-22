@@ -1,43 +1,33 @@
 import React, {useState, useEffect} from 'react';
 import '../styles/SearchPage.css';
-import { CircularProgress } from '@mui/material';
-import { Box } from '@mui/system';
 import movie from '../apis/movie';
+import { Backdrop } from '@mui/material';
+import { CircularProgress } from '@mui/material';
 import cinema from '../assets/cinema.jpg';
-
 
 
 const SearchPage = () => {
 
-    
     const [term, setTerm] = useState('');
     const [movies, setMovies] = useState([]);
-    const [loading, setLoading] = useState()
+    const [loading, setLoading] = useState(false)
 
 
-    const CircularIndeterminate = () => {
-      return (
-        <Box sx={{ display: 'flex' }}>
-          <CircularProgress />
-        </Box>
-      );
-    }
 
     const onSubmit = event => {
 
         event.preventDefault();
     
         search(term);
+        setLoading(false);
 
         setTerm('');
     
       };
 
     useEffect(() => {
-       
-       search(term)
-
-    }, []);
+       search(term);
+    }, [])
 
 
     const KEY = '59e3e159';
@@ -48,13 +38,31 @@ const SearchPage = () => {
                 apikey: KEY
             }
         });
-        if(response.data === null){
-           setLoading(CircularIndeterminate)
-        }
-        setMovies(response.data)
-        console.log(response.data)
-    
+        setMovies(response.data);
+        setLoading(true);
+        console.log(response.data);
     }
+
+
+
+
+    const renderedList = movies?.Search?.map((movie) => {
+                   return (
+                     <div 
+                       className='ui three column grid' 
+                       style={{marginTop: '30px', marginLeft:'60px'}}>
+                        <div className='column'>
+                          <div className='ui segment'>
+                            <div className='image'>
+                            <img src={movie.Poster} alt='movie' />
+                            </div>
+                              <div className='content'>
+                                <div className='meta'>{movie.Title}</div>
+                              </div>
+                          </div>
+                         </div>
+                      </div>);
+               })
 
     return (
         <section className='search-page'>
@@ -75,16 +83,14 @@ const SearchPage = () => {
                />
           </form>
            <div>
-               {movies?.Search?.map((movie) => {
-                   return <div className='flex-container'>
-                        <div className='flex-item'>
-                       <img src={movie.Poster} alt='movie' className='movie-pics'/>
-                       <p className='movie-title'>{movie.Title}</p> 
-                       </div>
-                       </div>
-               })}
-           </div>
-           <div>{loading}</div>
+              {loading ? (renderedList) : (<Backdrop
+                sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                open
+              >
+             <CircularProgress color="inherit" />
+             </Backdrop>)} 
+          </div>
+           
          
          
 
