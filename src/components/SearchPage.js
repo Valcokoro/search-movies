@@ -48,18 +48,15 @@ const SearchPage = () => {
 
     const renderedList = movies?.Search?.map((movie) => {
                    return (
-                     <div 
-                       className='ui three column grid' 
-                       style={{marginTop: '30px', marginLeft:'60px'}}>
-                        <div className='column'>
-                          <div className='ui segment'>
+                     <div className='flex-container'>
+                        <div className='flex-item'>
+                          
                             <div className='image'>
                             <img src={movie.Poster} alt='movie' />
                             </div>
                               <div className='content'>
                                 <div className='meta'>{movie.Title}</div>
                               </div>
-                          </div>
                          </div>
                       </div>);
                })

@@ -1,4 +1,4 @@
-@media (min-width: 480px) {
+@media screen and (min-width: 700px) {
   .header {
     margin-top: 0px;
     background-color: #292929;
@@ -48,7 +48,7 @@
   .search-bar {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 1206px;
+    width: 90%;
     height: 54px;
     margin-left: 30px;
     border: 1px solid #000000;
@@ -61,15 +61,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    border: 1px solid blue;
     width: 20%;
-    background-color: #000000;
     padding: 10px;
     margin-top: 40px;
   }
   .flex-item {
     max-width: 50%;
-    border: 1px solid blue;
     margin: 10px;
     text-align: center;
   }
@@ -90,7 +87,96 @@
   }
 }
 
-@media (max-width: 780px) {
+@media screen and (min-width: 550px) {
+  .header {
+    margin-top: 0px;
+    background-color: #292929;
+    height: 100px;
+  }
+  .first-section {
+    width: 100%;
+  }
+  .cinema {
+    width: 100%;
+  }
+  .btn {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 193px;
+    height: 33.58px;
+    border: 1px solid #FFFFFF;
+    background-color: #292929;
+    color: #FFFFFF;
+  }
+  .incredible {
+    position: absolute;
+    width: 490px;
+    height: 282px;
+    left: 77px;
+    top: 247px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 94px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+  }
+  h3 {
+    width: 77px;
+    height: 31px;
+    margin-left: 30px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+  }
+  .search-bar {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 90%;
+    height: 54px;
+    margin-left: 30px;
+    border: 1px solid #000000;
+  }
+  .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 20%;
+    padding: 10px;
+    margin-top: 40px;
+  }
+  .flex-item {
+    max-width: 50%;
+    margin: 10px;
+    text-align: center;
+  }
+  .movie-pics {
+    width: 100px;
+    margin-top: 30px;
+  }
+  .movie-title {
+    position: absolute;
+    width: 150px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 180px;
+    text-align: center;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 550px) {
   .header {
     margin-top: 0px;
     background-color: #292929;
