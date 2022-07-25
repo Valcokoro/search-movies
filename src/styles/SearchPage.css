@@ -1,4 +1,20 @@
 @media screen and (min-width: 700px) {
+  .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 5%;
+  }
+  .flex-container .flex-item {
+    max-width: 50%;
+    margin: 10px;
+    text-align: center;
+  }
   .header {
     margin-top: 0px;
     background-color: #292929;
@@ -37,7 +53,7 @@
   .search {
     width: 77px;
     height: 31px;
-    margin-left: 100px;
+    margin-left: 30px;
     top: 950px;
     font-family: 'DM Sans';
     font-style: normal;
@@ -55,25 +71,8 @@
     top: 1030px;
     border: 1px solid #000000;
   }
-  .flex-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 20%;
-    padding: 10px;
-    margin-top: 40px;
-  }
-  .flex-item {
-    max-width: 50%;
-    margin: 10px;
-    text-align: center;
-  }
   .movie-pics {
-    width: 100px;
+    width: 200px;
     margin-top: 30px;
   }
   .movie-title {
@@ -89,7 +88,23 @@
   }
 }
 
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 551px) and (max-width: 699px) {
+  .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 5%;
+  }
+  .flex-container .flex-item {
+    max-width: 50%;
+    margin: 10px;
+    text-align: center;
+  }
   .header {
     margin-top: 0px;
     background-color: #292929;
@@ -146,25 +161,8 @@
     margin-top: 30px;
     border: 1px solid #000000;
   }
-  .flex-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 20%;
-    padding: 10px;
-    margin-top: 40px;
-  }
-  .flex-item {
-    max-width: 50%;
-    margin: 10px;
-    text-align: center;
-  }
   .movie-pics {
-    width: 100px;
+    width: 200px;
     margin-top: 30px;
   }
   .movie-title {
@@ -181,6 +179,22 @@
 }
 
 @media screen and (max-width: 550px) {
+  .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 5%;
+  }
+  .flex-container .flex-item {
+    max-width: 50%;
+    margin: 10px;
+    text-align: center;
+  }
   .header {
     margin-top: 0px;
     background-color: #292929;

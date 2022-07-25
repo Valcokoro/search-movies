@@ -8,7 +8,7 @@ import cinema from '../assets/cinema.jpg';
 
 const SearchPage = () => {
 
-    const [term, setTerm] = useState('');
+    const [term, setTerm] = useState('Hello');
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false)
 
@@ -46,20 +46,16 @@ const SearchPage = () => {
 
 
 
-    const renderedList = movies?.Search?.map((movie) => {
-                   return (
-                     <div className='flex-container'>
-                        <div className='flex-item'>
-                          
-                            <div className='image'>
-                            <img src={movie.Poster} alt='movie' />
-                            </div>
-                              <div className='content'>
-                                <div className='meta'>{movie.Title}</div>
-                              </div>
-                         </div>
-                      </div>);
-               })
+    const renderedList = movies?.Search?.map((movie, index) => {
+      return (
+        <div className='flex-item' key={index}>
+          <img src={movie.Poster} alt='movie' className='movie-pics'/>
+            <div className='content'>
+              <div className='meta'>{movie.Title}</div>
+            </div>
+        </div>
+      );
+    })
 
     return (
         <section className='search-page'>
@@ -79,7 +75,7 @@ const SearchPage = () => {
                className='search-bar'
                />
           </form>
-           <div>
+           <div className='flex-container'>
               {loading ? (renderedList) : (<Backdrop
                 sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                 open

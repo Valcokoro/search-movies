@@ -1,20 +1,30 @@
 
 //LARGE SCREEN
 
-@media screen and (min-width: 700px){
-  
+@media screen and (min-width: 700px) {
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5%;
+    .flex-item{
+      max-width:50%;
+      margin: 10px;
+      text-align: center;
+    }
+  }
  .header{
     margin-top: 0px;
     background-color: #292929;
     height: 100px;
-}
+  }
   .first-section{
     width: 100%;
-}
-.cinema{
+  }
+  .cinema{
     width:100%
-}
-.btn{
+  }
+  .btn{
     position: absolute;
     margin-top: 20px;
     margin-left: 50px;
@@ -41,7 +51,7 @@
   .search{
     width: 77px;
     height: 31px;
-    margin-left: 100px;
+    margin-left: 30px;
     top: 950px;
     font-family: 'DM Sans';
     font-style: normal;
@@ -58,54 +68,51 @@
     top: 1030px;
     border: 1px solid #000000;  
   }
-  .flex-container{
-    display: flex;
-    flex-direction: row;
-    width: 20%;
-    padding: 10px;
-    margin-top: 40px;
-}
-   .flex-item{
-     max-width:50%;
-     margin: 10px;
-     text-align: center;
-    }
-
-   .movie-pics{
-     width:100px;
-     margin-top: 30px;
-}
+  .movie-pics{
+    width:200px;
+    margin-top: 30px;
+  }
   .movie-title{
-     position: absolute;
-     width: 150px;
-     font-family: 'DM Sans';
-     font-style: normal;
-     font-weight: 400;
-     font-size: 20px;
-     margin-left: 180px;
-     text-align: center;
-     color: black;
-
-}
-
+    position: absolute;
+    width: 150px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 180px;
+    text-align: center;
+    color: black;
+  }
 }
 
 
 //MEDIUM SCREEN
 
-@media screen and (min-width: 551px){
+@media screen and (min-width: 551px) and (max-width: 699px){
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5%;
+    .flex-item{
+      max-width:50%;
+      margin: 10px;
+      text-align: center;
+    }
+  }
+
   .header{
     margin-top: 0px;
     background-color: #292929;
     height: 100px;
-}
+  }
   .first-section{
     width: 100%;
-}
-.cinema{
+  }
+  .cinema{
     width:100%
-}
-.btn{
+  }
+  .btn{
     position: absolute;
     margin-top: 20px;
     margin-left: 50px;
@@ -149,75 +156,70 @@
     margin-top: 30px;
     border: 1px solid #000000;  
   }
-  .flex-container{
-    display: flex;
-    flex-direction: row;
-    width: 20%;
-    padding: 10px;
-    margin-top: 40px;
-}
-   .flex-item{
-     max-width:50%;
-     margin: 10px;
-     text-align: center;
-    }
-
-   .movie-pics{
-     width:100px;
-     margin-top: 30px;
-}
+  .movie-pics{
+    width:200px;
+    margin-top: 30px;
+  }
   .movie-title{
-     position: absolute;
-     width: 150px;
-     font-family: 'DM Sans';
-     font-style: normal;
-     font-weight: 400;
-     font-size: 20px;
-     margin-left: 180px;
-     text-align: center;
-     color: black;
-
-}
-
+    position: absolute;
+    width: 150px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 180px;
+    text-align: center;
+    color: black;
+  }
 }
 
 // SMALL SCREEN
 
 @media screen and (max-width: 550px){
-
-   .header{
-     margin-top: 0px;
-     background-color: #292929;
-     height: 70px;
-   }
-   .first-section{
-      width: 100%;
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5%;
+    .flex-item{
+      max-width:50%;
+      margin: 10px;
+      text-align: center;
     }
-   .cinema{
-      width:100%
-    }
-    .btn{
-      margin-top: 20px;
-      margin-left: 130px;
-      width: 108px;
-      height: 33.58px;
-      border: 1px solid #FFFFFF;
-      background-color: #292929;
+  }
+  .header{
+    margin-top: 0px;
+    background-color: #292929;
+    height: 70px;
+  }
+  .first-section{
+    width: 100%;
+  }
+  .cinema{
+    width:100%
+  }
+  .btn{
+    margin-top: 20px;
+    margin-left: 130px;
+    width: 108px;
+    height: 33.58px;
+    border: 1px solid #FFFFFF;
+    background-color: #292929;
+    color: #FFFFFF;
+  }
+  .incredible{
+      position: absolute;
+      width: 273px;
+      height: 72px;
+      top: 170px;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 36px;
+      text-align: center;
+      letter-spacing: -0.05em;
       color: #FFFFFF;
-    }
-    .incredible{
-       position: absolute;
-       width: 273px;
-       height: 72px;
-       top: 170px;
-       font-family: 'DM Sans';
-       font-style: normal;
-       font-weight: 700;
-       font-size: 28px;
-       line-height: 36px;
-       text-align: center;
-       letter-spacing: -0.05em;
-       color: #FFFFFF;
     }
     .search{
         width: 51px;
